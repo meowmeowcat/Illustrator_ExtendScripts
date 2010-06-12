@@ -65,27 +65,31 @@ function setDAENSIZE(_daendo){
 //円を選んでサイズ変える
 //閉じてれば円
 var pageItems = activeDocument.selection;
+var circlePageItemArray=[];
 var circlePageItem;
 var linePageItem;
 for(var i=0;i<pageItems.length;i++){
 		if(pageItems[i].closed){
-			circlePageItem=pageItems[i];
+			circlePageItemArray.push(pageItems[i]);
 			//trace(circlePageItem.height)
 		}else{
 			linePageItem=pageItems[i];
 		}
 }
-var transformationMatrix=app.getScaleMatrix(100*1.22, 100*Math.sin(_daendo)*1.22);
-circlePageItem.transform (transformationMatrix);
-sen_no_settei(circlePageItem);
+for(var k=0;k<circlePageItemArray.length;k++){
+	var transformationMatrix=app.getScaleMatrix(100*1.22, 100*Math.sin(_daendo)*1.22);
+	circlePageItemArray[k].transform (transformationMatrix);
+	sen_no_settei(circlePageItemArray[k]);
+}
 //円を回転
 //線の方向ベクトルとる
 var pathItems = activeDocument.selection;
+var circlepathItemArray=[];
 var circlepathItem;
 var linepathItem;
 for(var i=0;i<pathItems.length;i++){
 		if(pathItems[i].closed){
-			circlePathItem=pathItems[i];
+			circlepathItemArray.push(pathItems[i]);
 			////trace(circlePathItem.height)
 		}else{
 			linePathItem=pathItems[i];
@@ -109,8 +113,10 @@ var ctjV=new vec2d(ca4[0]-ca2[0],ca4[1]-ca2[1]);
 var ctjVAngle=Math.atan2(ctjV.y,ctjV.x)/Math.PI*180;
 */
 //var angle= ctjV.angleBetween(lineV)/Math.PI*180;
-var transformationMatrix2=app.getRotationMatrix(-90+lineVAngle);
-circlePageItem.transform (transformationMatrix2);
+for(var m=0;m<circlepathItemArray.length;m++){
+	var transformationMatrix2=app.getRotationMatrix(-90+lineVAngle);
+	circlepathItemArray[m].transform (transformationMatrix2);
+}
 //alert(v1.y+","+v2.y)
 //alert(lineV.angleBetween(ctjV)/Math.PI*180)
 //alert(ctjVAngle)
