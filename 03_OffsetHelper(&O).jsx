@@ -1,5 +1,5 @@
-﻿#target "Illustrator CS3"
-#include "D:/My Documents/Adobe Scripts/common/commonLib.jsx";
+#target "Illustrator CS3"
+#include "D:/workspace_git/Common_ExtendScripts/commonLib.jsx ";
 #include "D:/My Documents/Adobe Scripts/common/vec2d.jsx";
 //３軸を描いてy,x,z軸方向について入力された情報から線を引く
 

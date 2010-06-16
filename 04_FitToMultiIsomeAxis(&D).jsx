@@ -10,7 +10,7 @@ var o=app.activeDocument.selection[0];
 (function(o){for(var i in o){try{i+=':'+o[i]}catch(e){i+=':'+e}$.writeln(i)}})(o);
 })()*/
 
-#include "D:/My Documents/Adobe Scripts/common/commonLib.jsx";
+#include "D:/workspace_git/Common_ExtendScripts/commonLib.jsx ";
 #include "D:/My Documents/Adobe Scripts/common/vec2d.jsx";
 
 //var men=getMEN();

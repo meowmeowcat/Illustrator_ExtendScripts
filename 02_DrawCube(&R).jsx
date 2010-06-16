@@ -1,5 +1,5 @@
-﻿//ダイアログを出して、幅、高さ、奥行き奥行きを入力させて立方体をつくる
-#include "D:/My Documents/Adobe Scripts/common/commonLib.jsx";
+//ダイアログを出して、幅、高さ、奥行き奥行きを入力させて立方体をつくる
+#include "D:/workspace_git/Common_ExtendScripts/commonLib.jsx ";
 
 drawCube();
 
@@ -30,9 +30,9 @@ transFormMAE(rect_mae);
 trasFormSOKU(rect_soku);
 
 //線の設定
-sen_no_settei(rect_ue,true,"red",0.1,"round","round");
-sen_no_settei(rect_mae,true,"green",0.1,"round","round");
-sen_no_settei(rect_soku,true,"blue",0.1,"round","round");
+sen_no_settei(rect_ue,true,"red",0.3,"round","round");
+sen_no_settei(rect_mae,true,"green",0.3,"round","round");
+sen_no_settei(rect_soku,true,"blue",0.3,"round","round");
 
 //グループ化
 //var rectsGroup = app.activeDocument.groupItems.add();

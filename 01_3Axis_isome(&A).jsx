@@ -1,5 +1,5 @@
-﻿#target "Illustrator CS3"
-#include "D:/My Documents/Adobe Scripts/common/commonLib.jsx";
+#target "Illustrator CS3"
+#include "D:/workspace_git/Common_ExtendScripts/commonLib.jsx ";
 //３軸を描く
 tan30=0.57735;
 //var y_ax=drawLine(0,0,500,500*tan30,0.1,"red");//数値でないと何故かバグる
